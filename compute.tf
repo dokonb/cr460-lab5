@@ -19,7 +19,7 @@ resource "google_compute_instance" "instance1" {
 
 resource "google_compute_firewall" "web" {
     name = "web"
-    network = "${google_compute_network.cr460.name}"
+    network = "${google_compute_network.cr460lab.name}"
     allow {
         protocol = "tcp"
         ports = ["80"]
@@ -28,7 +28,7 @@ resource "google_compute_firewall" "web" {
 
 resource "google_compute_firewall" "ssh" {
     name = "ssh"
-    network = "${google_compute_network.cr460.name}"
+    network = "${google_compute_network.cr460lab.name}"
     allow {
         protocol = "tcp"
         ports = ["22"]
