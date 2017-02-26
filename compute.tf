@@ -1,14 +1,14 @@
 resource "google_compute_instance" "instance1" {
     name = "instance1"
     machine_type = "f1-micro"
-    zone = "us-east1-b"
+    zone = "us-central1-a"
 
     disk {
         image = "debian-cloud/debian-8"
     }
 
     network_interface {
-        subnetwork = "${google_compute_subnetwork.east1-dmz.name}"
+        subnetwork = "${google_compute_subnetwork.central1-dmz.name}"
         access_config {
             // IP
         }
